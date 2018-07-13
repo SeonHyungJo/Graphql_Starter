@@ -41,3 +41,23 @@ yarn add graphql-yoga
 
 - type을 새로 만들어서 적용
 - resolver에서 데이틀 Mutation해서 가져옴
+
+---
+
+## 2018-07-13
+
+### Graphql과 ORM(sequelize), Postgre 연동하기
+
+1. pg, pg-hstore, sequelize 설치
+2. sequelize-cli 설치 및
+
+```
+sequelize init:config ./config/sequelize.json
+sequelize init:models
+```
+
+3. postgre 설치 및 디비연동
+4. schema, resolver 수정(중요)
+5. index.js에 sequelize 적용하기
+
+> 추가적으로 sequelize에는 es6가 적용이 되지 않아서 적용한 버전으로 바꿀예정

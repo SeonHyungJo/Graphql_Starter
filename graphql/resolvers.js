@@ -2,8 +2,11 @@ import { people, getById } from "./db"
 
 const resolver = {
   Query: {
-    people: () => people,
-    person: (_, { id }) => getById(id)
+    people: () => {
+      let result = getById()
+      return result
+    }
+    //person: (_, { id }) => getById(id)
   }
 }
 
