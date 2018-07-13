@@ -31,7 +31,13 @@ export const people = [
   }
 ]
 
-export const getById = id => {
-  const filteredPeople = people.filter(person => id === person.id)
-  return filteredPeople[0]
+import models from "../models"
+
+// export const getById = id => {
+//   const filteredPeople = people.filter(person => id === person.id)
+//   return filteredPeople[0]
+// }
+
+export const getById = () => {
+  return models.User.findAll().then(results => results).catch(err => console.log(err))
 }
