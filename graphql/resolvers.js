@@ -1,12 +1,12 @@
-import { people, getById } from "./db"
+import { people, getById, getById2 } from "./db"
 
 const resolver = {
   Query: {
     people: () => {
       let result = getById()
       return result
-    }
-    //person: (_, { id }) => getById(id)
+    },
+    person: (_, { id }) => getById2(id)
   }
 }
 

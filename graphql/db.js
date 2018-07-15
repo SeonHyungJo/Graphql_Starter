@@ -41,3 +41,7 @@ import models from "../models"
 export const getById = () => {
   return models.User.findAll().then(results => results).catch(err => console.log(err))
 }
+
+export const getById2 = (id) => {
+  return models.User.findById(id).then(results => results).catch(err => console.log(err))
+}
