@@ -38,6 +38,10 @@ import models from "../models"
 //   return filteredPeople[0]
 // }
 
-export const getById = () => {
+export const getAll = () => {
   return models.User.findAll().then(results => results).catch(err => console.log(err))
+}
+
+export const getById = id => {
+  return models.User.findById(id).then(results => results).catch(err => console.log(err))
 }
