@@ -31,7 +31,7 @@ export const people = [
   }
 ]
 
-import models from "../models"
+//import models from "../models"
 
 // export const getById = id => {
 //   const filteredPeople = people.filter(person => id === person.id)
@@ -39,9 +39,11 @@ import models from "../models"
 // }
 
 export const getAll = () => {
-  return models.User.findAll().then(results => results).catch(err => console.log(err))
+  //return models.User.findAll().then(results => results).catch(err => console.log(err))
+  return people;
 }
 
 export const getById = id => {
-  return models.User.findById(id).then(results => results).catch(err => console.log(err))
+  //return models.User.findById(id).then(results => results).catch(err => console.log(err))
+  return people;
 }

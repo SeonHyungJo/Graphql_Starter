@@ -6,10 +6,11 @@ const server = new GraphQLServer({
   resolvers
 })
 
+server.start(() => console.log("Server is running on localhost:4000"))
 //--------------------------------------
 // connect To DB
-import models from "./models"
-models.sequelize.sync().then(function() {
-  server.start(() => console.log("Server is running on localhost:4000"))
-})
+// import models from "./models"
+// models.sequelize.sync().then(function() {
+//   server.start(() => console.log("Server is running on localhost:4000"))
+// })
 //--------------------------------------

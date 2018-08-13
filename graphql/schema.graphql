@@ -1,6 +1,8 @@
 type Person {
   id: Int!
-  userID: String!
+  name: String!
+  age: Int!
+  gender: String!
 }
 
 type Query {
